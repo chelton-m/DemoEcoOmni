@@ -1,0 +1,16 @@
+Ingredient,Product,Quantity per,Unit,Product Qty Sold,Unit Price,Transaction Date,Category,Supplier,Cost per Unit,Total Ingredient Cost,Total Revenue,Profit Margin,Waste Generated,Disposal Method,Location,Staff Member,Customer Type,Payment Method,Notes
+Milk,Latte,200,ml,12,4.5,1/10/25,Dairy,Fresh Dairy Co,0.02,4.8,54,91.1%,0,None,Café A,John Smith,Regular,Cash,Good quality milk
+Sugar,Latte,10,g,12,4.5,1/10/25,Sweetener,Sugar Corp,0.001,0.12,54,99.8%,0,None,Café A,John Smith,Regular,Cash,Organic sugar
+Coffee,Latte,15,g,12,4.5,1/10/25,Beverage,Coffee Beans Ltd,0.005,0.9,54,98.3%,0,None,Café A,John Smith,Regular,Cash,Premium blend
+Milk,Cappuccino,150,ml,8,4.0,1/10/25,Dairy,Fresh Dairy Co,0.02,2.4,32,92.5%,0,None,Café A,Sarah Johnson,Regular,Card,Good quality milk
+Sugar,Cappuccino,8,g,8,4.0,1/10/25,Sweetener,Sugar Corp,0.001,0.064,32,99.8%,0,None,Café A,Sarah Johnson,Regular,Card,Organic sugar
+Coffee,Cappuccino,20,g,8,4.0,1/10/25,Beverage,Coffee Beans Ltd,0.005,0.8,32,97.5%,0,None,Café A,Sarah Johnson,Regular,Card,Premium blend
+Milk,Matcha Latte,200,ml,10,4.8,1/10/25,Dairy,Fresh Dairy Co,0.02,4,48,91.7%,0,None,Café A,Mike Wilson,Premium,Cash,Good quality milk
+Sugar,Matcha Latte,10,g,10,4.8,1/10/25,Sweetener,Sugar Corp,0.001,0.1,48,99.8%,0,None,Café A,Mike Wilson,Premium,Cash,Organic sugar
+Matcha,Matcha Latte,5,g,10,4.8,1/10/25,Beverage,Tea Masters Inc,0.1,5,48,89.6%,0,None,Café A,Mike Wilson,Premium,Cash,Premium grade matcha
+Milk,Latte,200,ml,15,4.5,1/11/25,Dairy,Fresh Dairy Co,0.02,6,67.5,91.1%,0,None,Café A,Lisa Brown,Regular,Card,Good quality milk
+Sugar,Latte,10,g,15,4.5,1/11/25,Sweetener,Sugar Corp,0.001,0.15,67.5,99.8%,0,None,Café A,Lisa Brown,Regular,Card,Organic sugar
+Coffee,Latte,15,g,15,4.5,1/11/25,Beverage,Coffee Beans Ltd,0.005,1.125,67.5,98.3%,0,None,Café A,Lisa Brown,Regular,Card,Premium blend
+Milk,Cappuccino,150,ml,12,4.0,1/11/25,Dairy,Fresh Dairy Co,0.02,3.6,48,92.5%,0,None,Café A,David Lee,Regular,Cash,Good quality milk
+Sugar,Cappuccino,8,g,12,4.0,1/11/25,Sweetener,Sugar Corp,0.001,0.096,48,99.8%,0,None,Café A,David Lee,Regular,Cash,Organic sugar
+Coffee,Cappuccino,20,g,12,4.0,1/11/25,Beverage,Coffee Beans Ltd,0.005,1.2,48,97.5%,0,None,Café A,David Lee,Regular,Cash,Premium blend

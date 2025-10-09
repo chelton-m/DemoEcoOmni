@@ -19,6 +19,8 @@ export default function FileImportModal() {
     quantity: 'Qty Sold',
     revenue: 'Total Revenue',
     category: 'Category',
+    ingredient: 'Ingredient',
+    unit: 'Unit',
   });
 
   const onDrop = (acceptedFiles: File[]) => {
@@ -187,6 +189,21 @@ function Step2({ fileName, columnMappings, handleColumnMappingChange, handleImpo
     'Product ID',
     'Unit Price',
     'Customer Name',
+    'Ingredient',
+    'Unit',
+    'Quantity per',
+    'Product Qty Sold',
+    'Supplier',
+    'Cost per Unit',
+    'Total Ingredient Cost',
+    'Profit Margin',
+    'Waste Generated',
+    'Disposal Method',
+    'Location',
+    'Staff Member',
+    'Customer Type',
+    'Payment Method',
+    'Notes',
   ];
 
   const fields = [
@@ -195,6 +212,8 @@ function Step2({ fileName, columnMappings, handleColumnMappingChange, handleImpo
     { key: 'quantity', label: 'Quantity', description: 'Units sold or used' },
     { key: 'revenue', label: 'Revenue', description: 'Total sales amount' },
     { key: 'category', label: 'Category', description: 'Product category' },
+    { key: 'ingredient', label: 'Ingredient', description: 'Raw material or ingredient name' },
+    { key: 'unit', label: 'Unit', description: 'Measurement unit (ml, g, kg, etc.)' },
   ];
 
   return (
