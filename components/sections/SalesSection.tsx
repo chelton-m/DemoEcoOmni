@@ -14,9 +14,10 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-// Get the asset path (no basePath needed for GitHub Pages root deployment)
+// Get the asset path with basePath for production
 const getAssetPath = (path: string) => {
-  return path;
+  const basePath = process.env.NODE_ENV === 'production' ? '/DemoEcoOmni' : '';
+  return `${basePath}${path}`;
 };
 
 // Data matching the exact design from the image
