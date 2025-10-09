@@ -27,12 +27,6 @@ _next.backup/
 logo.backup/
 index.html.backup
 
-# Deployment files (only keep latest)
-404.html
-index.html
-_next/
-logo/
-
 # production
 /build
 
