@@ -9,6 +9,14 @@
 # next.js
 /.next/
 # /out/ - commented out for GitHub Pages deployment
+# But ignore build artifacts inside out/
+out/app-build-manifest.json
+out/build-manifest.json
+out/react-loadable-manifest.json
+out/cache/
+out/server/
+out/static/
+out/types/
 
 # production
 /build
