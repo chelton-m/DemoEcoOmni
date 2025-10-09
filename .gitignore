@@ -17,6 +17,21 @@ out/cache/
 out/server/
 out/static/
 out/types/
+out/package.json
+out/trace
+out/**/*.txt
+
+# Backup files from deployment
+*.backup
+_next.backup/
+logo.backup/
+index.html.backup
+
+# Deployment files (only keep latest)
+404.html
+index.html
+_next/
+logo/
 
 # production
 /build
