@@ -19,15 +19,18 @@ import {
 } from 'recharts';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
-// Data matching the waste management dashboard structure but with EcoOmni styling
+// Data matching the waste management dashboard structure with Vietnam regions and cities
 const wasteByRegion = [
-  { region: 'EAP', collected: 450 },
-  { region: 'ECA', collected: 320 },
-  { region: 'LAC', collected: 280 },
-  { region: 'MENA', collected: 520 },
-  { region: 'NA', collected: 380 },
-  { region: 'SA', collected: 290 },
-  { region: 'SSA', collected: 240 },
+  { region: 'North', collected: 450 },
+  { region: 'Central', collected: 320 },
+  { region: 'South', collected: 280 },
+];
+
+const wasteByCity = [
+  { city: 'Hanoi', collected: 380, region: 'North' },
+  { city: 'Ho Chi Minh', collected: 520, region: 'South' },
+  { city: 'Da Nang', collected: 290, region: 'Central' },
+  { city: 'Others', collected: 240, region: 'Mixed' },
 ];
 
 const wasteOverTime = [
@@ -51,10 +54,9 @@ const wasteBySector = [
 ];
 
 const wasteDetails = [
-  { region: 'EAP', collected: 450, diverted: 380, disposal: 70 },
-  { region: 'ECA', collected: 320, diverted: 280, disposal: 40 },
-  { region: 'LAC', collected: 280, diverted: 240, disposal: 40 },
-  { region: 'MENA', collected: 520, diverted: 450, disposal: 70 },
+  { region: 'North', collected: 450, diverted: 380, disposal: 70 },
+  { region: 'Central', collected: 320, diverted: 280, disposal: 40 },
+  { region: 'South', collected: 280, diverted: 240, disposal: 40 },
 ];
 
 export default function WasteSection() {
@@ -134,31 +136,42 @@ export default function WasteSection() {
             </label>
             <label className="flex items-center space-x-2">
               <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-              <span className="text-sm text-gray-600">EAP</span>
+              <span className="text-sm text-gray-600">North</span>
             </label>
             <label className="flex items-center space-x-2">
               <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-              <span className="text-sm text-gray-600">ECA</span>
+              <span className="text-sm text-gray-600">Central</span>
             </label>
             <label className="flex items-center space-x-2">
               <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-              <span className="text-sm text-gray-600">LAC</span>
+              <span className="text-sm text-gray-600">South</span>
+            </label>
+          </div>
+        </div>
+
+        {/* City Filter */}
+        <div className="mb-6">
+          <h4 className="text-sm font-medium text-gray-700 mb-3">City</h4>
+          <div className="space-y-2">
+            <label className="flex items-center space-x-2">
+              <input type="checkbox" defaultChecked className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
+              <span className="text-sm text-gray-600">All</span>
             </label>
             <label className="flex items-center space-x-2">
               <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-              <span className="text-sm text-gray-600">MENA</span>
+              <span className="text-sm text-gray-600">Hanoi</span>
             </label>
             <label className="flex items-center space-x-2">
               <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-              <span className="text-sm text-gray-600">SA</span>
+              <span className="text-sm text-gray-600">Ho Chi Minh</span>
             </label>
             <label className="flex items-center space-x-2">
               <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-              <span className="text-sm text-gray-600">NA</span>
+              <span className="text-sm text-gray-600">Da Nang</span>
             </label>
             <label className="flex items-center space-x-2">
               <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-              <span className="text-sm text-gray-600">SSA</span>
+              <span className="text-sm text-gray-600">Others</span>
             </label>
           </div>
         </div>
@@ -241,31 +254,42 @@ export default function WasteSection() {
               </label>
               <label className="flex items-center space-x-2">
                 <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-                <span className="text-sm text-gray-600">EAP</span>
+                <span className="text-sm text-gray-600">North</span>
               </label>
               <label className="flex items-center space-x-2">
                 <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-                <span className="text-sm text-gray-600">ECA</span>
+                <span className="text-sm text-gray-600">Central</span>
               </label>
               <label className="flex items-center space-x-2">
                 <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-                <span className="text-sm text-gray-600">LAC</span>
+                <span className="text-sm text-gray-600">South</span>
+              </label>
+            </div>
+          </div>
+
+          {/* City Filter */}
+          <div className="mb-6">
+            <h4 className="text-sm font-medium text-gray-700 mb-3">City</h4>
+            <div className="space-y-2">
+              <label className="flex items-center space-x-2">
+                <input type="checkbox" defaultChecked className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
+                <span className="text-sm text-gray-600">All</span>
               </label>
               <label className="flex items-center space-x-2">
                 <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-                <span className="text-sm text-gray-600">MENA</span>
+                <span className="text-sm text-gray-600">Hanoi</span>
               </label>
               <label className="flex items-center space-x-2">
                 <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-                <span className="text-sm text-gray-600">SA</span>
+                <span className="text-sm text-gray-600">Ho Chi Minh</span>
               </label>
               <label className="flex items-center space-x-2">
                 <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-                <span className="text-sm text-gray-600">NA</span>
+                <span className="text-sm text-gray-600">Da Nang</span>
               </label>
               <label className="flex items-center space-x-2">
                 <input type="checkbox" className="rounded border-gray-300 text-eco-green-600 focus:ring-eco-green-500" />
-                <span className="text-sm text-gray-600">SSA</span>
+                <span className="text-sm text-gray-600">Others</span>
               </label>
             </div>
           </div>
@@ -371,6 +395,43 @@ export default function WasteSection() {
                   <Bar 
                     dataKey="collected" 
                     fill="#16a34a"
+                    radius={[0, 4, 4, 0]}
+                    animationDuration={1500}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </motion.div>
+
+            {/* Food Waste Collected by City */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="bg-white rounded-xl shadow-md p-4 md:p-6"
+            >
+              <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">Food Waste Collected by City</h3>
+              <ResponsiveContainer width="100%" height={200}>
+                <BarChart data={wasteByCity} layout="horizontal">
+                  <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+                  <XAxis type="number" stroke="#6b7280" fontSize={12} />
+                  <YAxis 
+                    dataKey="city" 
+                    type="category" 
+                    stroke="#6b7280"
+                    width={80}
+                    fontSize={12}
+                  />
+                  <Tooltip
+                    contentStyle={{
+                      backgroundColor: 'white',
+                      border: '1px solid #e5e7eb',
+                      borderRadius: '8px',
+                    }}
+                  />
+                  <Bar 
+                    dataKey="collected" 
+                    fill="#3b82f6"
                     radius={[0, 4, 4, 0]}
                     animationDuration={1500}
                   />
