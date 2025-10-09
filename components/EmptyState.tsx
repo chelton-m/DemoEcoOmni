@@ -4,10 +4,9 @@ import { motion } from 'framer-motion';
 import { useData } from '@/context/DataContext';
 import { PlusIcon, ArrowPathIcon, ChartBarIcon, CubeIcon, TrashIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
 
-// Get the base path for assets (handles production basePath)
+// Get the asset path (no basePath needed for GitHub Pages root deployment)
 const getAssetPath = (path: string) => {
-  const basePath = process.env.NODE_ENV === 'production' ? '/DemoEcoOmni' : '';
-  return `${basePath}${path}`;
+  return path;
 };
 
 export default function EmptyState() {
