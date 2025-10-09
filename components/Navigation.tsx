@@ -4,6 +4,12 @@ import { useState, useEffect } from 'react';
 import { useData } from '@/context/DataContext';
 import { HomeIcon, ChartBarIcon, CubeIcon, TrashIcon, PlusIcon } from '@heroicons/react/24/outline';
 
+// Get the base path for assets (handles production basePath)
+const getAssetPath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/DemoEcoOmni' : '';
+  return `${basePath}${path}`;
+};
+
 export default function Navigation() {
   const { setShowImportModal, hasData } = useData();
   const [activeSection, setActiveSection] = useState('home');
@@ -64,7 +70,7 @@ export default function Navigation() {
                 className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
               >
                 <img 
-                  src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+                  src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
                   alt="EcoOmni Logo" 
                   className="h-12 w-auto"
                   onError={(e) => {

@@ -14,6 +14,12 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
+// Get the base path for assets (handles production basePath)
+const getAssetPath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/DemoEcoOmni' : '';
+  return `${basePath}${path}`;
+};
+
 // Data matching the exact design from the image
 const cogsData = [
   { name: 'Matcha Latte', value: 75, color: '#16a34a' },
@@ -43,7 +49,7 @@ export default function SalesSection() {
         <div className="flex items-center mb-3 md:mb-4">
           {/* EcoOmni Logo */}
           <img 
-            src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+            src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
             alt="EcoOmni Logo" 
             className="h-12 md:h-16 w-auto"
           />

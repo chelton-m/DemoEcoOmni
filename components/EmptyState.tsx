@@ -4,6 +4,12 @@ import { motion } from 'framer-motion';
 import { useData } from '@/context/DataContext';
 import { PlusIcon, ArrowPathIcon, ChartBarIcon, CubeIcon, TrashIcon, ArrowDownIcon } from '@heroicons/react/24/outline';
 
+// Get the base path for assets (handles production basePath)
+const getAssetPath = (path: string) => {
+  const basePath = process.env.NODE_ENV === 'production' ? '/DemoEcoOmni' : '';
+  return `${basePath}${path}`;
+};
+
 export default function EmptyState() {
   const { setShowImportModal } = useData();
 
@@ -23,27 +29,27 @@ export default function EmptyState() {
           <div className="w-full h-full relative">
             {/* Large background logos */}
             <img 
-              src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+              src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
               alt="" 
               className="absolute top-20 left-20 h-64 w-auto opacity-20"
             />
             <img 
-              src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+              src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
               alt="" 
               className="absolute top-40 right-32 h-48 w-auto opacity-15"
             />
             <img 
-              src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+              src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
               alt="" 
               className="absolute bottom-32 left-32 h-56 w-auto opacity-18"
             />
             <img 
-              src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+              src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
               alt="" 
               className="absolute bottom-20 right-20 h-40 w-auto opacity-12"
             />
             <img 
-              src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+              src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
               alt="" 
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-96 w-auto opacity-8"
             />
@@ -60,7 +66,7 @@ export default function EmptyState() {
           className="absolute top-20 left-10 w-32 h-32 bg-eco-green-200 rounded-full opacity-40 flex items-center justify-center shadow-lg"
         >
           <img 
-            src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+            src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
             alt="" 
             className="h-16 w-auto opacity-100"
           />
@@ -74,7 +80,7 @@ export default function EmptyState() {
           className="absolute top-40 right-20 w-28 h-28 bg-eco-blue-200 rounded-full opacity-40 flex items-center justify-center shadow-lg"
         >
           <img 
-            src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+            src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
             alt="" 
             className="h-12 w-auto opacity-100"
           />
@@ -88,7 +94,7 @@ export default function EmptyState() {
           className="absolute bottom-40 left-20 w-36 h-36 bg-eco-green-300 rounded-full opacity-35 flex items-center justify-center shadow-lg"
         >
           <img 
-            src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+            src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
             alt="" 
             className="h-12 w-auto opacity-100"
           />
@@ -102,7 +108,7 @@ export default function EmptyState() {
           className="absolute bottom-20 right-10 w-24 h-24 bg-eco-blue-300 rounded-full opacity-35 flex items-center justify-center shadow-lg"
         >
           <img 
-            src="/logo/EcoOmni-Logo-top-removebg-preview.png" 
+            src={getAssetPath("/logo/EcoOmni-Logo-top-removebg-preview.png")}
             alt="" 
             className="h-12 w-auto opacity-100"
           />
