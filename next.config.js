@@ -8,7 +8,8 @@ const nextConfig = {
   assetPrefix: isProd ? '/DemoEcoOmni/' : '',
   images: {
     unoptimized: true
-  }
+  },
+  distDir: 'out'
 }
 
 module.exports = nextConfig
